@@ -20,6 +20,7 @@
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-svelte": "^2.30.0",
+    "mdsvex": "^0.10.6",
     "postcss": "^8.4.24",
     "postcss-load-config": "^4.0.1",
     "prettier": "^2.8.8",
@@ -36,9 +37,22 @@
   "dependencies": {
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
+    "hast-util-to-html": "^8.0.4",
     "lucide-svelte": "^0.233.0",
     "radix-svelte": "^0.7.1",
+    "rehype-pretty-code": "^0.9.6",
+    "rehype-slug": "^5.1.0",
+    "remark-code-import": "^1.2.0",
+    "remark-gfm": "^3.0.1",
     "tailwind-merge": "^1.13.0",
-    "tailwindcss-animate": "^1.0.5"
+    "shiki": "^0.14.2",
+    "tailwindcss-animate": "^1.0.5",
+    "unist-builder": "^3.0.1",
+    "unist-util-visit": "^4.1.2"
+  },
+  "pnpm": {
+		"patchedDependencies": {
+			"mdsvex@0.10.6": "./patches/mdsvex@0.10.6.patch"
+		}
   }
 }
