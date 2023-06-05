@@ -1,25 +1,25 @@
 import type { DocResolver } from "$lib/types/articles";
 import type { PageLoad } from "./$types";
-import { error } from "@sveltejs/kit";
+import { error, redirect } from "@sveltejs/kit";
 import { slugFromPath } from "$lib/utils";
 
-export const load: PageLoad = async () => {
-	// there's definitely a better way to do this for the index page
-	// but I'll sort this out later - works for now :)
-	const modules = import.meta.glob(`/src/content/**/index.md`);
+export const load: PageLoad = async (event) => {
+	if (event.params.slug === "components") {
+		throw redirect(303, "/docs/components/accordion");
+	}
+
+	const modules = import.meta.glob(`/src/content/**/*.md`);
 
 	let match: { path?: string; resolver?: DocResolver } = {};
 
 	for (const [path, resolver] of Object.entries(modules)) {
-		if (slugFromPath(path) === "index") {
+		if (slugFromPath(path) === event.params.slug) {
 			match = { path, resolver: resolver as unknown as DocResolver };
 			break;
 		}
 	}
 
 	const doc = await match?.resolver?.();
-
-	console.log(doc)
 
 	if (!doc || !doc.metadata) {
 		throw error(404);

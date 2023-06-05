@@ -52,9 +52,6 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      fontFamily: {
-        sans: [...fontFamily.sans]
-      }
     }
   },
   plugins: [require("tailwindcss-animate")],

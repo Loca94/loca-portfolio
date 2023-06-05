@@ -35,12 +35,7 @@ export const mdsvexOptions = {
 			rehypePrettyCode,
 			{
 				theme: {
-					dark: JSON.parse(
-						fs.readFileSync(
-							path.resolve(__dirname, "./other/themes/dark.json"),
-							"utf-8"
-						)
-					),
+					dark: 'one-dark-pro',
 					light: JSON.parse(
 						fs.readFileSync(
 							path.resolve(

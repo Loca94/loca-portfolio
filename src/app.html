@@ -11,9 +11,17 @@
 		<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="preload" href="/font/Thorn.woff" as="font" type="font/woff2" crossorigin>
 
+		<script>
+			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {document.documentElement.classList.add('dark')} else {document.documentElement.classList.remove('dark')}
+
+			// On page load, detect if the browser supports touch events or not. Adds a class to the DOM.
+			document.documentElement.className += ("ontouchstart" in document.documentElement) ? ' touch' : ' no-touch';
+		</script>
+
 		%sveltekit.head%
 	</head>
-	<body class="bg-zinc-950" data-sveltekit-preload-data="hover">
+	<body class="bg-white dark:bg-zinc-950" data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
