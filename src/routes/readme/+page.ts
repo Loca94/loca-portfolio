@@ -19,8 +19,6 @@ export const load: PageLoad = async () => {
 
 	const doc = await match?.resolver?.();
 
-	console.log(doc)
-
 	if (!doc || !doc.metadata) {
 		throw error(404);
 	}

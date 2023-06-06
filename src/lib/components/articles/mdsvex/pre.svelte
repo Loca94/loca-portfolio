@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { CopyButton } from "$components/articles";
 	import { cn } from "$lib/utils";
+  import CopyButton from "../CopyButton.svelte";
 
 	let className: string | undefined | null = undefined;
 	export { className as class };
