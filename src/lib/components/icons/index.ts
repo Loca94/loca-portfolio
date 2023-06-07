@@ -3,6 +3,7 @@ import {
 	Check,
 	ClipboardCheck,
 	Copy,
+	Menu,
 	Moon,
 	Twitter
 } from "lucide-svelte";
@@ -10,7 +11,6 @@ import Apple from "./Apple.svelte";
 import Aria from "./Aria.svelte";
 import GitHub from "./GitHub.svelte";
 import Google from "./Google.svelte";
-import Logo from "./Logo.svelte";
 import Npm from "./Npm.svelte";
 import PayPal from "./PayPal.svelte";
 import Pnpm from "./Pnpm.svelte";
@@ -21,13 +21,10 @@ import Yarn from "./Yarn.svelte";
 export type Icon = LucideIcon;
 
 export const Icons = {
-	logo: Logo,
-	page: File,
-	media: Image,
 	twitter: Twitter,
 	check: Check,
 	copy: Copy,
-	copyDone: ClipboardCheck,
+	menu: Menu,
 	moon: Moon,
 	gitHub: GitHub,
 	radix: RadixSvelte,

@@ -13,7 +13,11 @@
 
 		<script>
 			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {document.documentElement.classList.add('dark')} else {document.documentElement.classList.remove('dark')}
+			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
 
 			// On page load, detect if the browser supports touch events or not. Adds a class to the DOM.
 			document.documentElement.className += ("ontouchstart" in document.documentElement) ? ' touch' : ' no-touch';
