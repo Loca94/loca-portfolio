@@ -18,7 +18,7 @@ export const mdsvexOptions = {
 	extensions: [".md"],
 	layout: path.resolve(
 		__dirname,
-		"./src/lib/components/articles/mdsvex/mdsvex.svelte"
+		"./src/lib/components/site/articles/mdsvex/mdsvex.svelte"
 	),
 	smartypants: {
 		quotes: false,

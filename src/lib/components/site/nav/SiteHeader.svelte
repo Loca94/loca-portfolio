@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Icons } from "$components/icons";
-  import ThemeSwitcher from "$components/ThemeSwitcher.svelte";
+  import { Icons } from "$components/site/icons";
+  import ThemeSwitcher from "$components/site/nav/ThemeSwitcher.svelte";
 </script>
 
 
@@ -17,17 +17,17 @@
         <Icons.menu class="h-5 w-5" />
       </button>
     </div>
-    <div class="hidden lg:flex lg:gap-x-16">
-      <a href="#" class="text-base leading-6 text-zinc-400 hover:text-zinc-100 transition">Projects</a>
-      <a href="#" class="text-base leading-6 text-zinc-400 hover:text-zinc-100 transition">Readme.md</a>
-      <a href="#" class="text-base leading-6 text-zinc-400 hover:text-zinc-100 transition">Dessert</a>
+    <div class="hidden lg:flex lg:gap-x-20">
+      <a href="#" class="text-lg leading-6 text-zinc-400 hover:text-zinc-100 transition">Projects</a>
+      <a href="#" class="text-lg leading-6 text-zinc-400 hover:text-zinc-100 transition">Readme.md</a>
+      <a href="#" class="text-lg leading-6 text-zinc-400 hover:text-zinc-100 transition">Dessert</a>
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <ThemeSwitcher />
     </div>
   </nav>
-  <!-- Mobile menu, show/hide based on menu open state. -->
-  <div class="lg:hidden" role="dialog" aria-modal="true">
+  <!-- TODO: Slide in view with Motion One Mobile menu, show/hide based on menu open state. -->
+  <div id="mobile" class="lg:hidden" role="dialog" aria-modal="true">
     <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 z-10"></div>
     <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">

@@ -1,7 +1,6 @@
 import type { Icon as LucideIcon } from "lucide-svelte";
 import {
 	Check,
-	ClipboardCheck,
 	Copy,
 	Menu,
 	Moon,

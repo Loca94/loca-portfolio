@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { TableOfContents, TableOfContentsItem } from "$lib/types/articles";
 	import { onMount } from "svelte";
-  import Tree from "$components/articles/Tree.svelte";
+  import Tree from "$components/site/articles/Tree.svelte";
 
 	let filteredHeadingsList: TableOfContents;
 
