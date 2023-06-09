@@ -18,7 +18,7 @@ specifiers:
   eslint-plugin-svelte: ^2.30.0
   hast-util-to-html: ^8.0.4
   lucide-svelte: ^0.233.0
-  mdsvex: ^0.10.6
+  mdsvex: 0.10.6
   motion: ^10.16.2
   postcss: ^8.4.24
   postcss-load-config: ^4.0.1

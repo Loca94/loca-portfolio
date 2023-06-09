@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { Icons } from "./icons";
-  import { Button } from "./ui/button";
+  import { Icons } from "$components/site/icons";
+  import { Button } from "$components/ui/button";
 
   onMount(() => {
     // currentTheme.set(localStorage.theme || (document.documentElement.classList.contains('dark') ? 'dark' : 'light'));

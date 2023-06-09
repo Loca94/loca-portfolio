@@ -19,7 +19,7 @@
     </div>
     <div class="hidden lg:flex lg:gap-x-20">
       <a href="#" class="text-lg leading-6 text-zinc-400 hover:text-zinc-100 transition">Projects</a>
-      <a href="#" class="text-lg leading-6 text-zinc-400 hover:text-zinc-100 transition">Readme.md</a>
+      <a href="/readme" class="text-lg leading-6 text-zinc-400 hover:text-zinc-100 transition">Readme.md</a>
       <a href="#" class="text-lg leading-6 text-zinc-400 hover:text-zinc-100 transition">Dessert</a>
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
