@@ -1,32 +1,36 @@
 <script lang="ts">
-  import { Icons } from "$components/site/icons";
   import ThemeSwitcher from "$components/site/nav/ThemeSwitcher.svelte";
+  import PageWrapper from "$components/site/PageWrapper.svelte";
+  import { Icons } from "$components/site/icons";
+  import { Button } from "$components/ui/button";
 </script>
 
 
 <header>
-  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-    <div class="flex lg:flex-1">
-      <a href="/" class="-m-1.5 p-1.5">
-        <img class="h-8 w-auto" src="/img/logos/logo.svg" alt="Davide Locatelli Logo">
-      </a>
-    </div>
-    <div class="flex lg:hidden">
-      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-indigo-300">
-        <span class="sr-only">Open main menu</span>
-        <Icons.menu class="h-5 w-5" />
-      </button>
-    </div>
-    <div class="hidden lg:flex lg:gap-x-20">
-      <a href="#" class="text-lg leading-6 text-zinc-400 hover:text-zinc-100 transition">Projects</a>
-      <a href="/readme" class="text-lg leading-6 text-zinc-400 hover:text-zinc-100 transition">Readme.md</a>
-      <a href="#" class="text-lg leading-6 text-zinc-400 hover:text-zinc-100 transition">Dessert</a>
-    </div>
-    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-      <ThemeSwitcher />
-    </div>
-  </nav>
-  <!-- TODO: Slide in view with Motion One Mobile menu, show/hide based on menu open state. -->
+  <PageWrapper>
+    <nav class="flex items-center justify-between" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <Button href="/" variant="link" class="-m-1.5 p-1.5">
+          <img class="h-8 w-auto" src="/img/logos/logo.svg" alt="Davide Locatelli Logo">
+        </Button>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-indigo-300">
+          <span class="sr-only">Open main menu</span>
+          <Icons.menu class="h-5 w-5" />
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <Button href="/projects" variant="link" class="text-base tracking-wide">Projects</Button>
+        <Button href="/readme" variant="link" class="text-base tracking-wide">Readme.md</Button>
+        <Button href="/dessert" variant="link" class="text-base tracking-wide">Dessert</Button>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <ThemeSwitcher />
+      </div>
+    </nav>
+  </PageWrapper>
+  <!-- TODO: Slide in view with Motion One - Mobile menu. -->
   <div id="mobile" class="lg:hidden" role="dialog" aria-modal="true">
     <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 z-10"></div>

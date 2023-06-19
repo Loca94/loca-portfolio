@@ -16,6 +16,6 @@
   }
 </script>
 
-<Button variant="ghost">
+<Button variant="link">
   <Icons.moon />
 </Button>

@@ -9,6 +9,6 @@
   $: doc = data.metadata;
 </script>
 
-<div class="mdsvex" id="mdsvex">
+<div class="mdsvex max-w-7xl mx-auto p-6" id="mdsvex">
   <svelte:component this={component} />
 </div>
