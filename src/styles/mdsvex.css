@@ -68,7 +68,7 @@
 }
 
 .dark [data-rehype-pretty-code-fragment] .word--highlighted {
-	@apply bg-zinc-900;
+	@apply bg-neutral-900;
 }
 
 [data-rehype-pretty-code-title] {

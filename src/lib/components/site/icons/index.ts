@@ -4,7 +4,8 @@ import {
 	Copy,
 	Menu,
 	Moon,
-	Twitter
+	Twitter,
+	X
 } from "lucide-svelte";
 import Apple from "./Apple.svelte";
 import Aria from "./Aria.svelte";
@@ -34,5 +35,6 @@ export const Icons = {
 	tailwind: Tailwind,
 	google: Google,
 	apple: Apple,
-	paypal: PayPal
+	paypal: PayPal,
+	X: X
 };

@@ -1,6 +1,3 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
-const colors = require('tailwindcss/colors')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -22,14 +19,17 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
+          light: "hsl(var(--primary-light))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
+          light: "hsl(var(--secondary-light))",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
+          light: "hsl(var(--destructive-light))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
@@ -47,6 +47,16 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        'btn-primary': {
+          bg: "hsl(var(--color-btn-primary-bg))",
+          text: "hsl(var(--color-btn-primary-text))",
+          border: "hsl(var(--color-btn-primary-border))"
+        },
+        'btn-destructive': {
+          bg: "hsl(var(--color-btn-destructive-bg))",
+          text: "hsl(var(--color-btn-destructive-text))",
+          border: "hsl(var(--color-btn-destructive-border))"
         },
       },
       borderRadius: {
