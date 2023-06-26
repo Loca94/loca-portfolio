@@ -16,6 +16,6 @@
   }
 </script>
 
-<Button variant="link">
+<Button variant="link" on:click={changeTheme}>
   <Icons.moon />
 </Button>
