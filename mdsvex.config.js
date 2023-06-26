@@ -5,6 +5,7 @@ import { toHtml } from "hast-util-to-html";
 import prettier from "prettier";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
+import urls from "rehype-urls";
 import { codeImport } from "remark-code-import";
 import remarkGfm from "remark-gfm";
 import { u } from "unist-builder";
@@ -28,6 +29,7 @@ export const mdsvexOptions = {
 	},
 	remarkPlugins: [remarkGfm, codeImport],
 	rehypePlugins: [
+		[urls, processUrl],
 		rehypeSlug,
 		rehypeComponentExample,
 		rehypeComponentPreToPre,
@@ -191,4 +193,18 @@ function getComponentSourceFileContent(src = undefined) {
 	);
 
 	return formattedSource;
+}
+
+function processUrl(url, node) {
+  if (node.tagName === "a") {
+    node.properties.class = "text-link";
+
+    if (!url.href.startsWith("/")) {
+      // Open external links in new tab
+      node.properties.target = "_blank"
+      // Fix a security concern with offsite links
+      // See: https://web.dev/external-anchors-use-rel-noopener/
+      node.properties.rel = "noopener noreferrer"
+    }
+  }
 }
